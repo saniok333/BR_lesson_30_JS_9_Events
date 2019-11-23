@@ -1,0 +1,8 @@
+div,
+textarea {
+    display: none;
+}
+
+.show-elem {
+    display: block;
+}
