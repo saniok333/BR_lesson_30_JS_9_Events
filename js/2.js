@@ -60,7 +60,9 @@ class CreateTable {
             };
 
             if (columnType == "string") {
-                tempArr.sort((a, b) => (a[columnName] > b[columnName]) ? 1 * sortOrder : -1 * sortOrder);
+                // tempArr.sort((a, b) => (a[columnName] > b[columnName]) ? 1 * sortOrder : -1 * sortOrder);
+                tempArr.sort((a, b) => (`${a[columnName]}`.localeCompare(`${b[columnName]}`)) * sortOrder);
+                // str1.localeCompare(str2)
             } else {
                 tempArr.sort((a, b) => (b[columnName] - a[columnName]) * sortOrder);
             }
